@@ -7,7 +7,11 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "https://wordstar.nexus", 
+        "https://muse.wordstar.nexus",
+        "http://localhost:8080" # Keep this for local testing if needed
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
 )
